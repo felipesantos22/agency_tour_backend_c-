@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Interfaces\" />
+      <Folder Include="Migrations\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="WeatherForecast.cs" />
+      <Compile Remove="Controllers\WeatherForecastController.cs" />
+      <Compile Remove="Data\**" />
+      <Compile Remove="Migrations\20231128170143_InitialCreate.cs" />
+      <Compile Remove="Migrations\20231128170143_InitialCreate.Designer.cs" />
+      <Compile Remove="Migrations\DataContextModelSnapshot.cs" />
+      <Compile Remove="Migrations\20231128170927_InitialCreate.cs" />
+      <Compile Remove="Migrations\20231128170927_InitialCreate.Designer.cs" />
+      <Compile Remove="Migrations\20231202015215_CreateTour.cs" />
+      <Compile Remove="Migrations\20231202015215_CreateTour.Designer.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Data\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Data\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Data\**" />
+    </ItemGroup>
+
+</Project>
